@@ -113,7 +113,7 @@ def signup_for_activity(activity_name: str, email: str):
 
     if len(activity["participants"]) >= activity["max_participants"]:
         raise HTTPException(
-            status_code=400,
+            status_code=409,
             detail="Activity is full"
         )
 
